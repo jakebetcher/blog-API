@@ -47,4 +47,34 @@ describe('Blog Posts', function() {
   });
 
 
+it('should update an item on POST', function() {
+  const newData = {
+    title: 'foo bar',
+    content: 'bizz bang',
+    author: 'Jesus'
+  };
+  return chai.request(app);
+  get('/blog-posts')
+  .then(function(res) {
+    newData.id = res.body[0].id;
+    return chai.request(app)
+    .put(`/blog-posts/${newData.id}`)
+    .then(function(res) {
+      expect(res).to.have.status(204);
+    });
+  });
+});
+
+it('should delete an item on DELETE', function() {
+  return chai.request(app)
+  .get('/blog-posts')
+  .then(function(res) {
+    return chai.request(app)
+    .delete(`/blog-posts/${res.body[0].id}`)
+  })
+  .then(function(res) {
+    expect(res).to.have.status(204);
+  });
+});
+
 });
