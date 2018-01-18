@@ -8,7 +8,9 @@ const {BlogPosts} = require('./models');
 const jsonParser = bodyParser.json();
 const app = express();
 
-
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/views/index.html');
+});
 
 
 BlogPosts.create('JavaScript Rocks', 'JavaScript is the future of programming and is better than all other languages', 'John Smith');
