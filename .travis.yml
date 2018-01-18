@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: dcvNxbXtnsj7l6AlVzoWdv4OeX/oCbC+Vw7gL+4oINPrM49o2zW8s6fT27dAdG3EIK6PWgbtmMkGlRGW+Edb7VbfwEzVksj9zMJnrnR2oI3XZhDGwR/Rl88fViH4UxwpQsgLqjI2dVTOmrRM5oQx860X5Z8PDye3bxpcBbkieSWahJyVJNKlh01kxpQjWjz/K1sWczwiuXCKEzutzSxwHKNalu/DwlxRLLhrdEUVXQJl8iaw/bTTbX/l6m03fDO3HL3eLhlW8JUiaNRHIXdVYGxGbJXHgZspNq03VeJtzJ3f5Txs20T+ySKr4f3EO2HStf8hPGqdI4kuCsPGobnGu+JiLTOOf8FJdWzRJ85S5c27l8rvZYhpkNv8uyYEAaAMIa3nVF3ahfoxvZMUt62wTNxOAKewtt9zCE0l1Zkr52Mnus47eu/3CWnQFO8U1Vujk/moK3AWarGLle7U694r0SzA0puZNO4NnE8+9662I5v9DadIcfc+aDbinSHYMjyLoJXzBl5IwPg/FUwSLVd5UVP9p9L6d/IlitUoNMH2kyQmc4GN6+T/wyqoTEXRsgRbfBMhIisHhzempTev467BXh+RlYPhhV5SeIwg3QMvlb14Txi1iLOxs1sN9iEwcppNrQZJQzAFQx5jiQNXKYWlpbAndH6fxcySVU6g9rUI5TE=
+  app: infinite-beyond-58132
+  on:
+    repo: jakebetcher/blog-API
